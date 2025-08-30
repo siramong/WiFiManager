@@ -14,7 +14,7 @@
 
 /**
  * ADD TO BUILD FLAGS
- -DWM_STRINGS_FILE="\"wm_strings_es_nibo.h\""
+ * -DWM_STRINGS_FILE="\"wm_strings_es_nibo.h\""
  */
 
 #ifndef WIFI_MANAGER_OVERRIDE_STRINGS
@@ -49,11 +49,11 @@ const char HTTP_ROOT_MAIN[] PROGMEM =
 "<!-- Reemplaza esta sección con tu logo de Nibo -->"
 "<div class='nibo-logo'>"
 "<svg width='60' height='60' viewBox='0 0 60 60' fill='none'>"
-"<circle cx='30' cy='30' r='25' fill='#6366f1' stroke='#4f46e5' stroke-width='2'/>"
+"<circle cx='30' cy='30' r='25' fill='#124BAF' stroke='#0E1121' stroke-width='2'/>"
 "<circle cx='22' cy='25' r='3' fill='white'/>"
 "<circle cx='38' cy='25' r='3' fill='white'/>"
 "<path d='M20 35 Q30 42 40 35' stroke='white' stroke-width='2' fill='none'/>"
-"<text x='30' y='50' text-anchor='middle' fill='#6366f1' font-size='8' font-weight='600'>NIBO</text>"
+"<text x='30' y='50' text-anchor='middle' fill='#124BAF' font-size='8' font-weight='600'>NIBO</text>"
 "</svg>"
 "</div>"
 "<!-- Fin del logo -->"
@@ -69,16 +69,16 @@ const char * const HTTP_PORTAL_MENU[] PROGMEM = {
 "<div class='menu-item'><form action='/param' method='get'><button class='btn btn-secondary'><span class='icon'>⚙️</span>Configuración Avanzada</button></form></div>",//MENU_PARAM
 "<div class='menu-item'><form action='/close' method='get'><button class='btn btn-outline'><span class='icon'>✖️</span>Cerrar Portal</button></form></div>", // MENU_CLOSE
 "<div class='menu-item'><form action='/restart' method='get'><button class='btn btn-warning'><span class='icon'>🔄</span>Reiniciar Robot</button></form></div>",// MENU_RESTART
-"<div class='menu-item'><form action='/exit' method='get'><button class='btn btn-outline'><span class='icon'>🚪</span>Salir</button></form></div>",  // MENU_EXIT
+"", // MENU_EXIT - Eliminado
 "<div class='menu-item'><form action='/erase' method='get'><button class='btn btn-danger'><span class='icon'>🗑️</span>Borrar Configuración</button></form></div>", // MENU_ERASE
-"<div class='menu-item'><form action='/update' method='get'><button class='btn btn-secondary'><span class='icon'>⬆️</span>Actualizar Firmware</button></form></div>",// MENU_UPDATE
+"", // MENU_UPDATE - Eliminado
 "<div class='separator'></div>" // MENU_SEP
 };
 
 const char HTTP_PORTAL_OPTIONS[] PROGMEM = "";
 const char HTTP_ITEM_QI[] PROGMEM = "<div role='img' aria-label='{r}%' title='{r}%' class='signal-strength q-{q} {i} {h}'></div>"; // rssi icons
 const char HTTP_ITEM_QP[] PROGMEM = "<div class='signal-percent {h}'>{r}%</div>"; // rssi percentage
-const char HTTP_ITEM[] PROGMEM = "<div class='wifi-item' onclick='c(this)' data-ssid='{V}'><div class='wifi-info'><div class='wifi-name'>{v}</div><div class='wifi-security'>{e}</div></div><div class='wifi-signal'>{qi}{qp}</div></div>";
+const char HTTP_ITEM[] PROGMEM = "<div class='wifi-item'><a href='#p' onclick='c(this)' data-ssid='{V}' class='wifi-link'><div class='wifi-info'><div class='wifi-name'>{v}</div><div class='wifi-security'>{e}</div></div><div class='wifi-signal'>{qi}{qp}</div></a></div>";
 
 const char HTTP_FORM_START[] PROGMEM = "<div class='form-container'><form method='POST' action='{v}' class='wifi-form'>";
 const char HTTP_FORM_WIFI[] PROGMEM = 
@@ -133,12 +133,7 @@ const char HTTP_ERASEBTN[] PROGMEM =
 "</form>"
 "</div>";
 
-const char HTTP_UPDATEBTN[] PROGMEM = 
-"<div class='update-section'>"
-"<form action='/update' method='get'>"
-"<button class='btn btn-secondary'>⬆️ Actualizar Firmware</button>"
-"</form>"
-"</div>";
+const char HTTP_UPDATEBTN[] PROGMEM = ""; // Eliminado
 
 const char HTTP_BACKBTN[] PROGMEM = 
 "<div class='navigation'>"
@@ -202,7 +197,7 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 "  text-align: center;"
 "  margin-bottom: 2rem;"
 "  padding-bottom: 1.5rem;"
-"  border-bottom: 1px solid rgba(156, 163, 175, 0.2);"
+"  border-bottom: 1px solid rgba(18, 75, 175, 0.3);"
 "}"
 
 ".logo-container {"
@@ -222,12 +217,12 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 ".main-title {"
 "  font-size: 1.8rem;"
 "  font-weight: 700;"
-"  color: #1f2937;"
+"  color: #ffffff;"
 "  margin-bottom: 0.5rem;"
 "}"
 
 ".subtitle {"
-"  color: #6b7280;"
+"  color: rgba(255, 255, 255, 0.7);"
 "  font-size: 0.9rem;"
 "  font-weight: 400;"
 "}"
@@ -273,14 +268,14 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 "}"
 
 ".btn-primary {"
-"  background: linear-gradient(135deg, #6366f1, #8b5cf6);"
+"  background: linear-gradient(135deg, #124BAF, #0d3a8a);"
 "  color: white;"
-"  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);"
+"  box-shadow: 0 4px 14px rgba(18, 75, 175, 0.4);"
 "}"
 
 ".btn-primary:hover {"
 "  transform: translateY(-2px);"
-"  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);"
+"  box-shadow: 0 8px 25px rgba(18, 75, 175, 0.5);"
 "}"
 
 ".btn-secondary {"
@@ -314,14 +309,15 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 
 ".btn-outline {"
 "  background: transparent;"
-"  color: #6b7280;"
-"  border: 1px solid rgba(156, 163, 175, 0.3);"
+"  color: rgba(255, 255, 255, 0.8);"
+"  border: 1px solid rgba(18, 75, 175, 0.4);"
 "  backdrop-filter: blur(10px);"
 "}"
 
 ".btn-outline:hover {"
-"  background: rgba(107, 114, 128, 0.1);"
-"  border-color: #6b7280;"
+"  background: rgba(18, 75, 175, 0.2);"
+"  border-color: #124BAF;"
+"  color: #ffffff;"
 "}"
 
 ".btn-large {"
@@ -336,37 +332,44 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 
 ".separator {"
 "  height: 1px;"
-"  background: rgba(156, 163, 175, 0.2);"
+"  background: rgba(18, 75, 175, 0.3);"
 "  margin: 1rem 0;"
 "}"
 
 ".wifi-item {"
-"  background: rgba(255, 255, 255, 0.7);"
-"  border: 1px solid rgba(156, 163, 175, 0.2);"
+"  background: rgba(18, 75, 175, 0.1);"
+"  border: 1px solid rgba(18, 75, 175, 0.2);"
 "  border-radius: 12px;"
-"  padding: 1rem;"
 "  margin-bottom: 0.5rem;"
-"  cursor: pointer;"
 "  transition: all 0.2s ease;"
+"  overflow: hidden;"
+"}"
+
+".wifi-link {"
 "  display: flex;"
 "  justify-content: space-between;"
 "  align-items: center;"
+"  padding: 1rem;"
+"  color: inherit;"
+"  text-decoration: none;"
+"  width: 100%;"
+"  cursor: pointer;"
 "}"
 
 ".wifi-item:hover {"
-"  background: rgba(99, 102, 241, 0.1);"
-"  border-color: rgba(99, 102, 241, 0.3);"
+"  background: rgba(18, 75, 175, 0.2);"
+"  border-color: rgba(18, 75, 175, 0.4);"
 "  transform: translateY(-1px);"
 "}"
 
 ".wifi-name {"
 "  font-weight: 600;"
-"  color: #1f2937;"
+"  color: #ffffff;"
 "}"
 
 ".wifi-security {"
 "  font-size: 0.8rem;"
-"  color: #6b7280;"
+"  color: rgba(255, 255, 255, 0.7);"
 "}"
 
 ".signal-strength {"
@@ -394,25 +397,26 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 ".input-label {"
 "  display: block;"
 "  font-weight: 500;"
-"  color: #374151;"
+"  color: #ffffff;"
 "  margin-bottom: 0.5rem;"
 "}"
 
 ".input-field {"
 "  width: 100%;"
 "  padding: 0.875rem 1rem;"
-"  border: 1px solid rgba(156, 163, 175, 0.3);"
+"  border: 1px solid rgba(18, 75, 175, 0.3);"
 "  border-radius: 8px;"
 "  font-size: 0.95rem;"
-"  background: rgba(255, 255, 255, 0.8);"
+"  background: rgba(14, 17, 33, 0.8);"
+"  color: #ffffff;"
 "  transition: all 0.2s ease;"
 "}"
 
 ".input-field:focus {"
 "  outline: none;"
-"  border-color: #6366f1;"
-"  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);"
-"  background: rgba(255, 255, 255, 0.95);"
+"  border-color: #124BAF;"
+"  box-shadow: 0 0 0 3px rgba(18, 75, 175, 0.2);"
+"  background: rgba(14, 17, 33, 0.95);"
 "}"
 
 ".password-container {"
@@ -581,19 +585,11 @@ const char HTTP_HELP[] PROGMEM =
 const char HTTP_HELP[] PROGMEM = "";
 #endif
 
-const char HTTP_UPDATE[] PROGMEM = 
-"<div class='update-container'>"
-"<h3>⬆️ Actualizar Firmware</h3>"
-"<p>Selecciona el archivo de firmware (.bin) para actualizar tu robot Nibo:</p>"
-"<form method='POST' action='u' enctype='multipart/form-data' class='update-form'>"
-"<div class='file-input-container'>"
-"<input type='file' name='update' accept='.bin,application/octet-stream' id='firmware-file' class='file-input'>"
-"<label for='firmware-file' class='file-label'>📁 Seleccionar Archivo</label>"
-"</div>"
-"<button type='submit' class='btn btn-primary btn-large update-btn' style='display:none;'>🚀 Actualizar Firmware</button>"
-"</form>"
-"<div class='update-warning'>"
-"<p>⚠️ <strong>Importante:</strong> No desconectes el robot durante la actualización</p>"
+const char HTTP_UPDATE[] PROGMEM = ""; // Eliminado - No se necesita
+
+const char HTTP_UPDATE_FAIL[] PROGMEM = ""; // Eliminado 
+
+const char HTTP_UPDATE_SUCCESS[] PROGMEM = ""; // Eliminado</p>"
 "</div>"
 "</div>"
 "<script>"
