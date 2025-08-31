@@ -42,11 +42,11 @@ const char HTTP_SCRIPT[] PROGMEM = "<script>function c(l){"
 
 const char HTTP_HEAD_END[] PROGMEM = "</head><body class='{c}'><div class='container'>"; // {c} = _bodyclass
 
-// Logo y header principal - AQUI PUEDES CAMBIAR EL LOGO
+// Logo y header principal - AQUÍ PUEDES CAMBIAR EL LOGO
 const char HTTP_ROOT_MAIN[] PROGMEM = 
 "<div class='header'>"
 "<div class='logo-container'>"
-"<!-- Reemplaza esta seccion con tu logo de Nibo -->"
+"<!-- Reemplaza esta sección con tu logo de Nibo -->"
 "<div class='nibo-logo'>"
 "<svg width='60' height='60' viewBox='0 0 60 60' fill='none'>"
 "<circle cx='30' cy='30' r='25' fill='#124BAF' stroke='#0E1121' stroke-width='2'/>"
@@ -59,18 +59,18 @@ const char HTTP_ROOT_MAIN[] PROGMEM =
 "<!-- Fin del logo -->"
 "</div>"
 "<h1 class='main-title'>{t}</h1>"
-"<p class='subtitle'>Configuracion WiFi del Robot</p>"
+"<p class='subtitle'>Configuración WiFi del Robot</p>"
 "</div>";
 
 const char * const HTTP_PORTAL_MENU[] PROGMEM = {
 "<div class='menu-item'><form action='/wifi' method='get'><button class='btn btn-primary'><span class='icon'>📶</span>Configurar WiFi</button></form></div>", // MENU_WIFI
 "<div class='menu-item'><form action='/0wifi' method='get'><button class='btn btn-secondary'><span class='icon'>🔧</span>WiFi Manual</button></form></div>", // MENU_WIFINOSCAN
-"<div class='menu-item'><form action='/info' method='get'><button class='btn btn-info'><span class='icon'>ℹ️</span>Informacion del Sistema</button></form></div>", // MENU_INFO
-"<div class='menu-item'><form action='/param' method='get'><button class='btn btn-secondary'><span class='icon'>⚙️</span>Configuracion Avanzada</button></form></div>",//MENU_PARAM
+"<div class='menu-item'><form action='/info' method='get'><button class='btn btn-info'><span class='icon'>ℹ️</span>Información del Sistema</button></form></div>", // MENU_INFO
+"<div class='menu-item'><form action='/param' method='get'><button class='btn btn-secondary'><span class='icon'>⚙️</span>Configuración Avanzada</button></form></div>",//MENU_PARAM
 "", // MENU_CLOSE - Eliminado
 "<div class='menu-item'><form action='/restart' method='get'><button class='btn btn-warning'><span class='icon'>🔄</span>Reiniciar Robot</button></form></div>",// MENU_RESTART
 "", // MENU_EXIT - Eliminado
-"<div class='menu-item'><form action='/erase' method='get'><button class='btn btn-danger'><span class='icon'>🗑️</span>Borrar Configuracion</button></form></div>", // MENU_ERASE
+"<div class='menu-item'><form action='/erase' method='get'><button class='btn btn-danger'><span class='icon'>🗑️</span>Borrar Configuración</button></form></div>", // MENU_ERASE
 "", // MENU_UPDATE - Eliminado
 "<div class='separator'></div>" // MENU_SEP
 };
@@ -95,7 +95,7 @@ const char HTTP_FORM_WIFI[] PROGMEM =
 "</div>";
 
 const char HTTP_FORM_WIFI_END[] PROGMEM = "";
-const char HTTP_FORM_STATIC_HEAD[] PROGMEM = "<div class='advanced-section'><h3>Configuracion IP Estatica (Opcional)</h3>";
+const char HTTP_FORM_STATIC_HEAD[] PROGMEM = "<div class='advanced-section'><h3>Configuración IP Estática (Opcional)</h3>";
 const char HTTP_FORM_END[] PROGMEM = 
 "</div><div class='form-actions'>"
 "<button type='submit' class='btn btn-primary btn-large' onclick='showLoader(this)'>"
@@ -112,15 +112,15 @@ const char HTTP_SCAN_LINK[] PROGMEM = "<div class='scan-section' style='margin-t
 const char HTTP_SAVED[] PROGMEM = 
 "<div class='status-message success'>"
 "<div class='status-icon'>✅</div>"
-"<h3>¡Configuracion Guardada!</h3>"
-"<p>Nibo se esta conectando a la red WiFi.<br/>Si la conexion falla, vuelve a conectarte al punto de acceso para intentar de nuevo.</p>"
+"<h3>¡Configuración Guardada!</h3>"
+"<p>Nibo se está conectando a la red WiFi.<br/>Si la conexión falla, vuelve a conectarte al punto de acceso para intentar de nuevo.</p>"
 "<div class='loading-animation'><div class='spinner'></div></div>"
 "</div>";
 
 const char HTTP_PARAMSAVED[] PROGMEM = 
 "<div class='status-message success'>"
 "<div class='status-icon'>✅</div>"
-"<h3>Configuracion Guardada</h3>"
+"<h3>Configuración Guardada</h3>"
 "</div>";
 
 const char HTTP_END[] PROGMEM = "</div></body></html>";
@@ -129,7 +129,7 @@ const char HTTP_ERASEBTN[] PROGMEM =
 "<div class='danger-zone'>"
 "<h3>⚠️ Zona de Peligro</h3>"
 "<form action='/erase' method='get'>"
-"<button class='btn btn-danger'>🗑️ Borrar Configuracion WiFi</button>"
+"<button class='btn btn-danger'>🗑️ Borrar Configuración WiFi</button>"
 "</form>"
 "</div>";
 
@@ -138,7 +138,7 @@ const char HTTP_UPDATEBTN[] PROGMEM = ""; // Eliminado
 const char HTTP_BACKBTN[] PROGMEM = 
 "<div class='navigation'>"
 "<form action='/' method='get'>"
-"<button class='btn btn-outline'>← Volver al Menu Principal</button>"
+"<button class='btn btn-outline'>← Volver al Menú Principal</button>"
 "</form>"
 "</div>";
 
@@ -146,7 +146,7 @@ const char HTTP_STATUS_ON[] PROGMEM =
 "<div class='status-message success'>"
 "<div class='status-icon'>✅</div>"
 "<h3>Conectado Exitosamente</h3>"
-"<p><strong>Red:</strong> {v}<br/><strong>Direccion IP:</strong> {i}</p>"
+"<p><strong>Red:</strong> {v}<br/><strong>Dirección IP:</strong> {i}</p>"
 "</div>";
 
 const char HTTP_STATUS_OFF[] PROGMEM = 
@@ -158,11 +158,11 @@ const char HTTP_STATUS_OFF[] PROGMEM =
 
 const char HTTP_STATUS_OFFPW[] PROGMEM = "<br/><strong>Error:</strong> Contraseña incorrecta";
 const char HTTP_STATUS_OFFNOAP[] PROGMEM = "<br/><strong>Error:</strong> Red no encontrada";
-const char HTTP_STATUS_OFFFAIL[] PROGMEM = "<br/><strong>Error:</strong> No se pudo establecer conexion";
+const char HTTP_STATUS_OFFFAIL[] PROGMEM = "<br/><strong>Error:</strong> No se pudo establecer conexión";
 const char HTTP_STATUS_NONE[] PROGMEM = 
 "<div class='status-message info'>"
 "<div class='status-icon'>ℹ️</div>"
-"<h3>Sin Configuracion</h3>"
+"<h3>Sin Configuración</h3>"
 "<p>No hay ninguna red WiFi configurada</p>"
 "</div>";
 
@@ -584,17 +584,18 @@ const char HTTP_STYLE[] PROGMEM = "<style>"
 #ifndef WM_NOHELP
 const char HTTP_HELP[] PROGMEM =
  "<div class='help-section'>"
- "<h3>Paginas Disponibles</h3>"
+ "<h3>📚 Páginas Disponibles</h3>"
  "<div class='help-table'>"
- "<div class='help-item'><strong>/</strong> - Pagina principal del menu</div>"
+ "<div class='help-item'><strong>/</strong> - Página principal del menú</div>"
  "<div class='help-item'><strong>/wifi</strong> - Escanear y configurar WiFi</div>"
- "<div class='help-item'><strong>/info</strong> - Informacion del sistema</div>"
- "<div class='help-item'><strong>/param</strong> - Configuracion de parametros</div>"
+ "<div class='help-item'><strong>/info</strong> - Información del sistema</div>"
+ "<div class='help-item'><strong>/param</strong> - Configuración de parámetros</div>"
+ "<div class='help-item'><strong>/update</strong> - Actualización OTA</div>"
  "<div class='help-item'><strong>/restart</strong> - Reiniciar dispositivo</div>"
- "<div class='help-item'><strong>/erase</strong> - Borrar configuracion WiFi</div>"
+ "<div class='help-item'><strong>/erase</strong> - Borrar configuración WiFi</div>"
  "</div>"
  "<p style='text-align:center;margin-top:1rem;'>"
- "Nibo Robot - Powered by WiFiManager"
+ "🤖 <strong>Nibo Robot</strong> - Powered by WiFiManager"
  "</p>"
  "</div>";
 #else
@@ -631,7 +632,7 @@ const char HTTP_INFO_wifihead[] PROGMEM = "</div><div class='info-section'><h3>I
 // Simplificado: solo tiempo activo e IP
 const char HTTP_INFO_uptime[] PROGMEM = "<div class='info-item'><span class='info-label'>Tiempo Conectado:</span><span class='info-value'>{1} Min {2} Seg</span></div>";
 const char HTTP_INFO_staip[] PROGMEM = "<div class='info-item'><span class='info-label'>IP del Robot:</span><span class='info-value'>{1}</span></div>";
-// Eliminadas las demas variables de informacion
+// Eliminadas las demás variables de información
 const char HTTP_INFO_chipid[] PROGMEM = "";
 const char HTTP_INFO_idesize[] PROGMEM = "";
 const char HTTP_INFO_sdkver[] PROGMEM = "";
@@ -720,13 +721,13 @@ const char HTTP_JS[] PROGMEM =
 "    xhr.send(params);"
 "    return xhr;"
 "}"
-"// Funcion para mostrar estado de conexion en tiempo real"
+"// Función para mostrar estado de conexión en tiempo real"
 "function checkConnectionStatus() {"
 "    postAjax('/status', '', function(data) {"
-"        console.log('Estado de conexion:', data);"
+"        console.log('Estado de conexión:', data);"
 "    });"
 "}"
-"// Verificar estado cada 5 segundos durante la conexion"
+"// Verificar estado cada 5 segundos durante la conexión"
 "if(window.location.pathname === '/wifi') {"
 "    setInterval(checkConnectionStatus, 5000);"
 "}"
